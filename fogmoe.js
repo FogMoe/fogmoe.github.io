@@ -1,4 +1,4 @@
 function key() {
-    var key = "Sawe25asg@";
+    var key = "密钥是：Sawe25asg@";
     alert(key);
 }
