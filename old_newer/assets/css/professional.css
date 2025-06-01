@@ -1,0 +1,342 @@
+/* FOGMOE 现代简洁风格样式 */
+
+/* 基础字体和排版 */
+body, input, select, textarea {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* 简洁的背景设计 */
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 移除复杂的雾气背景，使用简单的装饰元素 */
+.fog-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 70% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 30% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* 主容器 */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero区域 - 简洁现代 */
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.slogan {
+    font-size: 1.25rem;
+    color: #a1a1aa;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-top: 1.5rem;
+}
+
+/* 卡片样式 - 现代玻璃态设计 */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.5) 50%, transparent 100%);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(59, 130, 246, 0.2);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.card h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* About区域样式 */
+.about p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #d4d4d8;
+    margin: 0;
+    text-align: center;
+}
+
+/* 创始人信息 - 简洁布局 */
+.founder-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+}
+
+.founder-info h3 {
+    color: #3b82f6;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.founder-info .title {
+    color: #6366f1;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.founder-info .desc {
+    color: #d4d4d8;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* 联系方式样式 - 简洁现代 */
+.contact {
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-width: 80px;
+}
+
+
+
+.icon-link:hover {
+    transform: translateY(-2px);
+    background: rgba(59, 130, 246, 0.05);
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+.icon-link:hover .icon {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: #60a5fa;
+    transform: scale(1.05);
+}
+
+.icon-link .label {
+    font-size: 0.875rem;
+    color: #a1a1aa;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.icon-link:hover .label {
+    color: #d4d4d8;
+}
+
+/* Footer样式 */
+.footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p {
+    color: #71717a;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.footer a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: #60a5fa;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+        padding: 1rem;
+    }
+    
+    .card {
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero {
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-icons {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .contact-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .icon-link {
+        flex-direction: row;
+        min-width: 200px;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    
+    .icon-link .icon {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+
+/* 图标样式统一 */
+.icon-link .icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #3b82f6;
+    transition: all 0.3s ease;
+    margin-bottom: 0.75rem;
+    font-weight: normal;
+}
+
+/* 使用Unicode字符确保图标显示 */
+.icon-link[href*="mailto"] .icon::before {
+    content: "✉";
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+.icon-link[href*="x.com"] .icon::before,
+.icon-link[href*="twitter.com"] .icon::before {
+    content: "𝕏";
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.icon-link[href*="t.me"] .icon::before,
+.icon-link[href*="telegram"] .icon::before {
+    content: "✈";
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+.icon-link[href*="github"] .icon::before {
+    content: "⚡";
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+/* 移除Font Awesome类的默认样式 */
+.icon-link .icon.fas,
+.icon-link .icon.fab {
+    font-family: inherit !important;
+}
+
+.icon-link .icon.fas::before,
+.icon-link .icon.fab::before {
+    content: none;
+}
+
+/* 移除所有不必要的动画 */
+* {
+    animation: none !important;
+}
+
+/* 保留必要的过渡效果 */
+.card,
+.icon-link,
+.icon-link .icon,
+.icon-link .label,
+.footer a {
+    animation: none !important;
+} 
