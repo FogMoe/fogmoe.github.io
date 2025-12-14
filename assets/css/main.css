@@ -315,7 +315,10 @@ a:hover {
 	transform: translate3d(0, 0, 0);
 	/* Set your background with this */
 
-	background: #348cb2 url("images/bg.gif") bottom left;
+	background-size: auto 100%;
+	width: 6750px;
+
+	background: #348cb2 url("images/bg.gif") center center;
 	background-repeat: repeat-x;
 	height: 100%;
 	left: 0;
@@ -896,7 +899,6 @@ a:hover {
 	}
 
 	#bg {
-		background-size: 1500px auto;
 		width: 4500px;
 	}
 }
@@ -982,7 +984,6 @@ a:hover {
 	}
 
 	#bg {
-		background-size: 750px auto;
 		width: 2250px;
 	}
 }
@@ -1072,7 +1073,6 @@ a:hover {
 	}
 
 	#bg {
-		background-size: 300px auto;
 		width: 900px;
 	}
 
@@ -1171,7 +1171,6 @@ a:hover {
 	}
 
 	#bg {
-		background-size: 412.5px auto;
 		width: 1237.5px;
 	}
 
