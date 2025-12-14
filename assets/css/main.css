@@ -634,6 +634,16 @@ a:hover {
 	margin: 1.5em 0 0 0;
 }
 
+#header nav ul {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0;
+	padding: 0;
+	margin: 0;
+}
+
 #header nav li {
 	-moz-animation: nav-icons 0.5s ease-in-out forwards;
 	-webkit-animation: nav-icons 0.5s ease-in-out forwards;
@@ -1150,5 +1160,18 @@ a:hover {
 
 	#header nav {
 		padding: 0 1em;
+	}
+
+	#header nav li {
+		width: 4em;
+		height: 4em;
+		line-height: 4.4em;
+	}
+
+	#header nav a:before {
+		font-size: 1.4em;
+		height: 2.2em;
+		line-height: 2.2em;
+		width: 2.2em;
 	}
 }
